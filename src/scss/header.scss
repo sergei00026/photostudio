@@ -15,9 +15,19 @@
 	&__contacts {
 		align-items: center;
 		display: flex;
+		gap: 24px;
 	}
 	// .header__callback
 	&__callback {
+		color: $mainColorOrange;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: math.div(15, 12);
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		padding: 8px 24px;
+		border: 2px solid #e97522;
+		border-radius: 10px;
 	}
 	// .header__tel
 	&__tel {
