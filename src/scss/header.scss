@@ -7,6 +7,8 @@
 	&__menu {
 		display: flex;
 		align-items: center;
+		gap: 15px;
+		padding: 12px 0;
 	}
 	// .header__logo
 	&__logo {
@@ -16,6 +18,11 @@
 		align-items: center;
 		display: flex;
 		gap: 24px;
+		@media (max-width: $pc) {
+			flex-direction: column;
+			gap: 6px;
+			justify-content: flex-end;
+		}
 	}
 	// .header__callback
 	&__callback {
@@ -28,9 +35,14 @@
 		padding: 8px 24px;
 		border: 2px solid #e97522;
 		border-radius: 10px;
+		@media (max-width: $pc) {
+			padding: 8px 12.5px;
+			order: 2;
+		}
 	}
 	// .header__tel
 	&__tel {
+		white-space: nowrap;
 	}
 }
 .menu {
@@ -39,12 +51,17 @@
 		flex: 1 1 auto;
 		display: flex;
 		justify-content: center;
+		@media (max-width: $mobile) {
+			display: none;
+		}
 	}
 	// .menu__list
 	&__list {
 		align-items: center;
 		display: flex;
-		gap: 32px;
+		column-gap: 32px;
+		row-gap: 10px;
+		flex-wrap: wrap;
 	}
 	// .menu__item
 	&__item {
