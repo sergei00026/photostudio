@@ -12,6 +12,13 @@
 	}
 	// .header__logo
 	&__logo {
+		@include adaptiveValue("width", 108, 63);
+		img {
+			max-width: 100%;
+		}
+		@media (max-width: $mobile) {
+			flex: 1 1 auto;
+		}
 	}
 	// .header__contacts
 	&__contacts {
@@ -21,7 +28,10 @@
 		@media (max-width: $pc) {
 			flex-direction: column;
 			gap: 6px;
-			justify-content: flex-end;
+			align-items: flex-end;
+		}
+		@media (max-width: $mobileSmall) {
+			flex-direction: row;
 		}
 	}
 	// .header__callback
@@ -35,14 +45,27 @@
 		padding: 8px 24px;
 		border: 2px solid #e97522;
 		border-radius: 10px;
+		white-space: nowrap;
+
 		@media (max-width: $pc) {
 			padding: 8px 12.5px;
 			order: 2;
 		}
+		@media (max-width: $mobileSmall) {
+			display: none;
+		}
 	}
 	// .header__tel
 	&__tel {
+		font-size: 14px;
 		white-space: nowrap;
+		&_icon {
+			@media (max-width: $mobileSmall) {
+				background: url("@img/header/phone.svg") 0 0 no-repeat;
+				width: 20px;
+				min-height: 20px;
+			}
+		}
 	}
 }
 .menu {
@@ -83,7 +106,7 @@
 	@media (max-width: $mobile) {
 		display: block;
 		position: relative;
-		width: rem(30);
+		flex: 0 0 rem(30);
 		height: rem(18);
 		cursor: pointer;
 		z-index: 5;
@@ -95,8 +118,9 @@
 			right: 0;
 			position: absolute;
 			width: 100%;
-			height: rem(2);
-			background-color: #000;
+			height: rem(3);
+			background-color: $mainColorOrange;
+			border-radius: 15px;
 		}
 		&::before {
 			top: 0;
@@ -105,7 +129,7 @@
 			bottom: 0;
 		}
 		span {
-			top: calc(50% - rem(1));
+			top: calc(50% - rem(0.55));
 		}
 		.menu-open & {
 			span {

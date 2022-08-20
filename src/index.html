@@ -7,6 +7,110 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
+				<section class="page__first first-page">
+					<div class="first-page__container">
+						<h1 class="first-page__heading">Профессиональная фотосессия в студии</h1>
+						<h2 class="first-page__subheading">Наша фотостудия позволит исполнить ваши мечты</h2>
+						<div class="first-page__description">
+							<p>Фотографии стали неотъемлемой частью нашей жизни. Это теперь не просто памятные снимки в альбомах, ныне фото становиться способом понравиться окружающим, получить восхищение, заявить о себе всему миру.
+							</p>
+							<p>Выбор правильной фотостудии занимает далеко не последнее место в получение фотографий. И мы с точностью заявляем, что нашей фотостудией вы останетесь довольны и еще не раз захотите возвращаться к нам.
+							</p>
+						</div>
+						<button type="submit" class="first-page__btn">Получить консультацию</button>
+					</div>
+					<video src="files/video.mp4" autoplay loop class="first-page__video"></video>
+				</section>
+				<section class="page__jobs jobs-page">
+					<h2 class="jobs-page__title title">Наши работы</h2>
+					<!-- Оболочка слайдера -->
+					<div class="jobs-page__slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="jobs-page__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="jobs-page__slide swiper-slide">
+								<a href="" class="jobs-page__link">
+									<img src="img/jobs/Pic-left.jpg" alt="pic" class="jobs-page__img">
+								</a>
+							</div>
+							<!-- Слайд -->
+							<div class="jobs-page__slide swiper-slide">
+								<a href="" class="jobs-page__link">
+									<img src="img/jobs/Pic-Center.jpg" alt="pic" class="jobs-page__img">
+								</a>
+							</div>
+							<!-- Слайд -->
+							<div class="jobs-page__slide swiper-slide">
+								<a href="" class="jobs-page__link">
+									<img src="img/jobs/Pic-Right.jpg" alt="pic" class="jobs-page__img">
+								</a>
+							</div>
+							<!-- Слайд -->
+							<div class="jobs-page__slide swiper-slide">
+								<a href="" class="jobs-page__link">
+									<img src="img/jobs/Pic-left.jpg" alt="pic" class="jobs-page__img">
+								</a>
+							</div>
+							<!-- Слайд -->
+							<div class="jobs-page__slide swiper-slide">
+								<a href="" class="jobs-page__link">
+									<img src="img/jobs/Pic-Center.jpg" alt="pic" class="jobs-page__img">
+								</a>
+							</div>
+						</div>
+
+						<!-- Если нужна навигация (влево/вправо) -->
+						<button type="button" class="jobs-page-button-prev _icon-arrow"></button>
+						<button type="button" class="jobs-page-button-next _icon-arrow"></button>
+
+					</div>
+					<!-- Если нужна пагинация -->
+					<div class="jobs-page-pagination swiper-pagination"></div>
+				</section>
+				<section class="page__locations locations-page">
+					<div class="locations-page__container">
+						<h2 class="locations-page__title title">Наши локации</h2>
+						<!-- Оболочка слайдера -->
+						<div class="locations-page__box">
+							<div class="locations-page__slider swiper">
+								<!-- Двигающееся часть слайдера -->
+								<div class="locations-page__wrapper swiper-wrapper">
+									<!-- Слайд -->
+									<div class="locations-page__slide swiper-slide">
+										<a href="" class="locations-page__link">
+											<img src="img/locations/01.jpg" alt="img" class="locations-page__img">
+										</a>
+									</div>
+									<!-- Слайд -->
+									<div class="locations-page__slide swiper-slide">
+										<a href="" class="locations-page__link">
+											<img src="img/locations/02.jpg" alt="img" class="locations-page__img">
+										</a>
+									</div>
+									<!-- Слайд -->
+									<div class="locations-page__slide swiper-slide">
+										<a href="" class="locations-page__link">
+											<img src="img/locations/03.jpg" alt="img" class="locations-page__img">
+										</a>
+									</div>
+								</div>
+
+							</div>
+							<!-- Если нужна навигация (влево/вправо) -->
+							<button type="button" class="locations-page__prev _icon-arrow"></button>
+							<button type="button" class="locations-page__next _icon-arrow"></button>
+						</div>
+					</div>
+				</section>
+				<section class="page__decoration decoration-page">
+					<div class="decoration-page__title title">Оформление фотостудии</div>
+					<div class="decoration-page__box">
+						<video src="files/video.mp4" class="decoration-page__video"> </video>
+						<button type="submit" class="decoration-page__button">
+							<img src="@img/decoration/triangle.svg" alt="triangle" class="decoration-page__img-triangle">
+						</button>
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

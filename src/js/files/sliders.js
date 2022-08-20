@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, EffectCoverflow, Pagination } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -27,22 +27,39 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Перечень слайдеров
 	// Проверяем, есть ли слайдер на стронице
-	if (document.querySelector('.swiper')) { // Указываем скласс нужного слайдера
+	if (document.querySelector('.jobs-page__slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.swiper', { // Указываем скласс нужного слайдера
+		new Swiper('.jobs-page__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation],
+			modules: [Navigation, EffectCoverflow, Pagination],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
+			slidesPerView: 3,
+			slidesPerGroup: 1,
 			autoHeight: true,
 			speed: 800,
+			grabCursor: true,
+			parallax: true,
+			// Активный слайд по центру
+			centeredSlides: true,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
+			loop: true,
+
+			effect: 'coverflow',
+			// Дополнение к coverflow
+			coverflowEffect: {
+				// Угол
+				rotate: 20,
+				// Наложение
+				stretch: 40,
+				// Тень
+				slideShadows: true,
+				scale: 0.9,
+
+			},
 			//preloadImages: false,
 			//lazy: true,
 
@@ -56,12 +73,12 @@ function initSliders() {
 			*/
 
 			// Пагинация
-			/*
+
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
 			},
-			*/
+
 
 			// Скроллбар
 			/*
@@ -73,8 +90,8 @@ function initSliders() {
 
 			// Кнопки "влево/вправо"
 			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
+				prevEl: '.jobs-page-button-prev',
+				nextEl: '.jobs-page-button-next',
 			},
 
 			// Брейкпоинты
@@ -99,6 +116,86 @@ function initSliders() {
 				},
 			},
 			*/
+			// События
+			on: {
+
+			}
+		});
+	}
+	if (document.querySelector('.locations-page__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.locations-page__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, Pagination],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 3,
+			slidesPerGroup: 1,
+			autoHeight: true,
+			speed: 800,
+			grabCursor: true,
+			parallax: true,
+			spaceBetween: 27,
+
+			// Активный слайд по центру
+			// centeredSlides: true,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			loop: true,
+
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Эффекты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+			// Пагинация
+			/*
+						pagination: {
+							el: '.swiper-pagination',
+							clickable: true,
+						},
+			*/
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.locations-page__prev',
+				nextEl: '.locations-page__next',
+			},
+
+			// Брейкпоинты
+
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+
+				},
+				400: {
+					slidesPerView: 2,
+					spaceBetween: 27,
+
+				},
+				768: {
+					slidesPerView: 3,
+				},
+			},
 			// События
 			on: {
 
