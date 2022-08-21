@@ -29,3 +29,4 @@ function pauseVideo() {
 }
 
 decorationPageVideo.addEventListener("click", pauseVideo);
+

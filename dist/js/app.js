@@ -3556,7 +3556,7 @@
             modules: [ Navigation, EffectCoverflow, Pagination ],
             observer: true,
             observeParents: true,
-            slidesPerView: 3,
+            slidesPerView: 2,
             slidesPerGroup: 1,
             autoHeight: true,
             speed: 800,
@@ -3578,6 +3578,17 @@
             navigation: {
                 prevEl: ".jobs-page-button-prev",
                 nextEl: ".jobs-page-button-next"
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 2
+                },
+                992: {
+                    slidesPerView: 3
+                },
+                1268: {
+                    slidesPerView: 4
+                }
             },
             on: {}
         });
