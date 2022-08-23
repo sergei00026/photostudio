@@ -105,7 +105,7 @@ function initSliders() {
 					slidesPerView: 3,
 				},
 				1268: {
-					slidesPerView: 4,
+					slidesPerView: 3,
 				},
 			},
 
@@ -189,6 +189,86 @@ function initSliders() {
 					slidesPerView: 3,
 				},
 			},
+			// События
+			on: {
+
+			}
+		});
+	}
+	// Проверяем, есть ли слайдер на стронице
+	if (document.querySelector('.reviews-page__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.reviews-page__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			// slidesPerView: 3,
+			slidesPerGroup: 1,
+			autoHeight: true,
+			speed: 800,
+			grabCursor: true,
+			spaceBetween: 16,
+
+			// Активный слайд по центру
+			// centeredSlides: true,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			loop: true,
+
+
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Эффекты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+			// Пагинация
+			/*
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			*/
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.reviews-page__prev',
+				nextEl: '.reviews-page__next',
+			},
+
+			// Брейкпоинты
+
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+				},
+				768: {
+					slidesPerView: 2,
+				},
+
+				992: {
+					slidesPerView: 3,
+				},
+
+			},
+
 			// События
 			on: {
 

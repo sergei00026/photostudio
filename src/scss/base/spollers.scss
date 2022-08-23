@@ -4,30 +4,42 @@
 // Блок со спойлерами
 .spollers {
 	display: grid;
-	gap: 15px;
 }
 // Спойлер
 .spollers__item {
-	font-size: rem(20);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 162%;
+	color: #4a4a4a;
 }
 // Заголовок спойлера
 .spollers__title {
 	width: 100%;
 	cursor: default;
 	text-align: left;
-	border: 1px solid #eee;
-	padding: rem(10) rem(15);
+	// border: 1px solid #eee;
+	// padding: rem(10) rem(15);
 	border-radius: rem(5);
 	position: relative;
+	font-weight: 500;
+	@include adaptiveValue("font-size", 16, 14);
+	line-height: 162%;
+	color: #4a4a4a;
+	outline: none;
+	& > p {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
 	._spoller-init & {
 		cursor: pointer;
 		&::before,
 		&::after {
 			content: "";
 			position: absolute;
-			right: 10px;
-			top: 50%;
-			background-color: #000;
+			right: 0px;
+			bottom: 3%;
+			background-color: #e97522;
 			height: 2px;
 			width: 15px;
 			transition: transform 0.5s ease 0s;
@@ -50,7 +62,15 @@
 }
 // Контент спойлера
 .spollers__body {
-	padding: rem(20);
-	border-radius: rem(5);
-	border: 1px solid #eee;
+	outline: none;
+	@include adaptiveValue("font-size", 16, 14);
+
+	// padding: rem(20);
+	// border-radius: rem(5);
+	// border: 1px solid #eee;
+	& > p {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
 }
