@@ -1,5 +1,8 @@
 //====================================================================================================
 .header {
+	.menu-open & {
+		background: rgba(15, 15, 15, 0.7);
+	}
 	// .header__container
 	&__container {
 	}
@@ -46,7 +49,14 @@
 		border: 2px solid #e97522;
 		border-radius: 10px;
 		white-space: nowrap;
-
+		transition: all 0.3s ease 0s;
+		&:hover {
+			background: #e97522;
+			color: #ffffff;
+		}
+		&::active {
+			font-size: 10px;
+		}
 		@media (max-width: $pc) {
 			padding: 8px 12.5px;
 			order: 2;
@@ -77,6 +87,28 @@
 		@media (max-width: $mobile) {
 			display: none;
 		}
+		.menu-open & {
+			display: flex;
+			flex-direction: column;
+			position: fixed;
+			top: 80px;
+			right: 0px;
+			padding: 20px;
+			z-index: 10;
+			& .menu__list {
+				flex-direction: column;
+				align-items: flex-end;
+			}
+			& .menu__item {
+			}
+			& .menu__link {
+				text-align: right;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 143%;
+				color: #ffffff;
+			}
+		}
 	}
 	// .menu__list
 	&__list {
@@ -91,6 +123,14 @@
 	}
 	// .menu__link
 	&__link {
+		color: #4a4a4a;
+		transition: all 0.3s ease 0s;
+		&:hover {
+			color: #333333;
+		}
+		&._active {
+			color: #e97522;
+		}
 	}
 	// .menu__icon
 	&__icon {
@@ -129,7 +169,7 @@
 			bottom: 0;
 		}
 		span {
-			top: calc(50% - rem(0.55));
+			top: calc(47.5% - rem(0.55));
 		}
 		.menu-open & {
 			span {

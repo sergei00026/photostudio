@@ -41,9 +41,7 @@ spollersTitle.forEach((element, index) => {
 			descriptionPageMore[index].style.display = 'none';
 		} else {
 			descriptionPageMore[index].style.display = 'block';
-
 		}
-
 	});
 });
 
@@ -64,3 +62,22 @@ mutation.observe(slidActive, {
 // slidActive.insertAdjacentHTML('beforeend', '<p>Привет</p>');
 
 */
+
+
+// меню бургер
+
+const menuBody = document.querySelector('.menu__body');
+const html = document.querySelector('html');
+const body = document.querySelector('body');
+// console.log(html);
+document.addEventListener("click", function (e) {
+
+	const targetElement = e.target;
+
+	if (!targetElement.closest('.menu__body') || targetElement.closest('.menu__link')) {
+		html.classList.remove('menu-open');
+		html.classList.remove('lock');
+
+	}
+
+});

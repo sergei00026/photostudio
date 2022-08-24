@@ -50,12 +50,120 @@ body::after {
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
-	background-color: #eee;
-	padding: 20px;
+	background: #ffffff;
+	border-radius: 15px;
+	padding: 42px 48px;
 	width: 100%;
-	max-width: 900px;
+	max-width: 680px;
 	border-radius: 20px;
 	.lock & {
 		visibility: visible;
+	}
+	& > :not(:last-child) {
+		margin-bottom: 32px;
+	}
+}
+.popup {
+	// .popup__title
+	&__title {
+	}
+	// .popup__box
+	&__box {
+	}
+	// .popup__btn
+	&__btn {
+		width: 100%;
+		text-align: center;
+		display: block;
+		justify-content: center;
+	}
+}
+//=============================================
+.popup {
+	// .popup__content
+	&__content {
+		display: flex;
+		align-items: center;
+		& > * {
+			flex: 0 0 50%;
+		}
+		@media (max-width: $mobile) {
+			flex-direction: column;
+		}
+	}
+}
+.content-popup {
+	position: relative;
+	max-width: 840px;
+	@media (max-width: $mobileSmall) {
+		padding: 32px 17px;
+	}
+	// .content-popup__img
+	&__img {
+		padding-right: 15px;
+		img {
+			max-width: 100%;
+			@media (max-width: $mobile) {
+				max-width: 121px;
+			}
+		}
+	}
+	// .content-popup__form
+	&__form {
+		padding-left: 15px;
+		margin-bottom: 0 !important;
+	}
+	// .content-popup__heading
+	&__heading {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 30, 22);
+		line-height: 120%;
+		color: #4a4a4a;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 32, 16);
+		}
+	}
+	// .content-popup__box
+	&__box {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 16, 10);
+		}
+	}
+	// .content-popup__name-label
+	&__name-label {
+	}
+	// .content-popup__name-input
+	&__name-input {
+	}
+	// .content-popup__email-label
+	&__email-label {
+	}
+	// .content-popup__email-input
+	&__email-input {
+	}
+	// .content-popup__tel-label
+	&__tel-label {
+	}
+	// .content-popup__tel-input
+	&__tel-input {
+	}
+	// .content-popup__btn
+	&__btn {
+		&:not(:first-child) {
+			@include adaptiveValue("margin-top", 32, 16);
+		}
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+	// .content-popup__data
+	&__data {
+		font-size: 11px;
+	}
+	// .content-popup__close
+	&__close {
+		position: absolute;
+		top: 15px;
+		right: 15px;
 	}
 }

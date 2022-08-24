@@ -211,6 +211,9 @@ function initSliders() {
 			grabCursor: true,
 			spaceBetween: 16,
 
+			// Стартовый слайд.
+			// initialSlide: 0,
+
 			// Активный слайд по центру
 			// centeredSlides: true,
 
@@ -261,10 +264,13 @@ function initSliders() {
 				},
 				768: {
 					slidesPerView: 2,
+					// Активный слайд по центру
+					centeredSlides: false,
 				},
-
 				992: {
 					slidesPerView: 3,
+					// Активный слайд по центру
+					centeredSlides: true,
 				},
 
 			},

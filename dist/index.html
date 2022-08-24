@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220824040324">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220824225118">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,11 +22,11 @@
 					</div>
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="" class="menu__link">Портфолио</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Виды работ</a></li>
-							<li class="menu__item"><a href="" class="menu__link">О фотостудии</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Услуги и цены</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+							<li class="menu__item"><a href="" data-goto="#portfolio" class="menu__link">Портфолио</a></li>
+							<li class="menu__item"><a href="" data-goto="#jobs" class="menu__link">Виды работ</a></li>
+							<li class="menu__item"><a href="" data-goto="#photo" class="menu__link">О фотостудии</a></li>
+							<li class="menu__item"><a href="" data-goto="#price" class="menu__link">Услуги и цены</a></li>
+							<li class="menu__item"><a href="" data-goto="#contacts" class="menu__link">Контакты</a></li>
 						</ul>
 					</nav>
 					<div class="header__contacts">
@@ -49,11 +49,11 @@
 						<p>Выбор правильной фотостудии занимает далеко не последнее место в получение фотографий. И мы с точностью заявляем, что нашей фотостудией вы останетесь довольны и еще не раз захотите возвращаться к нам.
 						</p>
 					</div>
-					<button type="submit" class="first-page__btn">Получить консультацию</button>
+					<button type="submit" class="first-page__btn" data-popup="#popupfirstpage">Получить консультацию</button>
 				</div>
 				<video autoplay muted playsinline src="files/video.mp4" loop class="first-page__video"></video>
 			</section>
-			<section class="page__jobs jobs-page">
+			<section class="page__jobs jobs-page" id="portfolio">
 				<h2 class="jobs-page__title title">Наши работы</h2>
 				<div class="jobs-page__slider swiper">
 					<div class="jobs-page__wrapper swiper-wrapper">
@@ -88,7 +88,7 @@
 				</div>
 				<div class="jobs-page-pagination swiper-pagination"></div>
 			</section>
-			<section class="page__locations locations-page">
+			<section class="page__locations locations-page" id="jobs">
 				<div class="locations-page__container">
 					<h2 class="locations-page__title title">Наши локации</h2>
 
@@ -128,7 +128,7 @@
 					</button>
 				</div>
 			</section>
-			<section class="page__services services-page">
+			<section class="page__services services-page" id="photo">
 				<div class="services-page__container">
 					<h2 class="services-page__title title">Виды услуг</h2>
 					<div class="services-page__body">
@@ -283,7 +283,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__prices prices-page">
+			<section class="page__prices prices-page" id="price">
 				<div class="prices-page__container">
 					<h2 class="prices-page__title title">Стоимость фотосесии</h2>
 					<div class="prices-page__body">
@@ -302,9 +302,9 @@
 								<div class="prices-page__add-services add-services-prices">
 									<div class="add-services-prices__heading">Дополнительные услуги</div>
 									<div class="add-services-prices__body">
-										<div class="add-services-prices__item">Помощь в позировании </div>
-										<div class="add-services-prices__item">Визажист + 2000 ₽</div>
-										<div class="add-services-prices__item add-services-prices__item_big">Дополнительная ретушь фото
+										<div class="add-services-prices__item" data-popup="#popup1">Помощь в позировании </div>
+										<div class="add-services-prices__item" data-popup="#popup2">Визажист + 2000 ₽</div>
+										<div class="add-services-prices__item add-services-prices__item_big" data-popup="#popup3">Дополнительная ретушь фото
 											— 1 т. / 250 ₽ </div>
 									</div>
 								</div>
@@ -326,9 +326,9 @@
 								<div class="prices-page__add-services add-services-prices">
 									<div class="add-services-prices__heading">Дополнительные услуги</div>
 									<div class="add-services-prices__body">
-										<div class="add-services-prices__item">Помощь в позировании </div>
-										<div class="add-services-prices__item">Визажист + 2000 ₽</div>
-										<div class="add-services-prices__item add-services-prices__item_big">Дополнительная ретушь фото
+										<div class="add-services-prices__item" data-popup="#popup1">Помощь в позировании </div>
+										<div class="add-services-prices__item" data-popup="#popup2">Визажист + 2000 ₽</div>
+										<div class="add-services-prices__item add-services-prices__item_big" data-popup="#popup3">Дополнительная ретушь фото
 											— 1 т. / 200 ₽ </div>
 									</div>
 								</div>
@@ -351,7 +351,7 @@
 								<div class="prices-page__add-services add-services-prices">
 									<div class="add-services-prices__heading">Дополнительные услуги</div>
 									<div class="add-services-prices__body">
-										<div class="add-services-prices__item add-services-prices__item_big">Дополнительная ретушь фото
+										<div class="add-services-prices__item add-services-prices__item_big" data-popup="#popup3">Дополнительная ретушь фото
 											— 1 т. / 250 ₽ </div>
 									</div>
 								</div>
@@ -359,8 +359,8 @@
 							</div>
 						</div>
 					</div>
-
 				</div>
+
 			</section>
 			<section class="page__description description-page description-page__two">
 				<div class="description-page__container">
@@ -450,18 +450,13 @@
 						<div class="reviews-page__wrapper swiper-wrapper">
 							<!-- Слайд -->
 							<div class="reviews-page__slide swiper-slide">
-								<picture><source srcset="img/reviews/01.webp" type="image/webp"><img src="img/reviews/01.png" alt="review" class="reviews-page__img"></picture>
-								<div class="reviews-page__heading">Мария</div>
-								<div class="reviews-page__text">Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких французских булок, да выпей чаю.</div>
-								<div class="reviews-page__more">Показать ещё</div>
-							</div>
-							<!-- Слайд -->
-							<div class="reviews-page__slide swiper-slide">
 								<picture><source srcset="img/reviews/02.webp" type="image/webp"><img src="img/reviews/02.png" alt="review" class="reviews-page__img"></picture>
 								<div class="reviews-page__heading">Сергей</div>
 								<div class="reviews-page__text">Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких французских булок, да выпей чаю.</div>
 								<div class="reviews-page__more">Показать ещё</div>
 							</div>
+
+
 							<!-- Слайд -->
 							<div class="reviews-page__slide swiper-slide">
 								<picture><source srcset="img/reviews/03.webp" type="image/webp"><img src="img/reviews/03.png" alt="review" class="reviews-page__img"></picture>
@@ -469,6 +464,15 @@
 								<div class="reviews-page__text">Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких французских булок, да выпей чаю.</div>
 								<div class="reviews-page__more">Показать ещё</div>
 							</div>
+
+							<!-- Слайд -->
+							<div class="reviews-page__slide swiper-slide">
+								<picture><source srcset="img/reviews/01.webp" type="image/webp"><img src="img/reviews/01.png" alt="review" class="reviews-page__img"></picture>
+								<div class="reviews-page__heading">Мария</div>
+								<div class="reviews-page__text">Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких французских булок, да выпей чаю.</div>
+								<div class="reviews-page__more">Показать ещё</div>
+							</div>
+
 						</div>
 						<!-- Если нужна навигация (влево/вправо) -->
 						<button type="button" class="reviews-page__prev _icon-arrow"></button>
@@ -477,7 +481,7 @@
 					<button type="submit" class="reviews-page__btn">Добавить отзыв</button>
 				</div>
 			</section>
-			<section class="page__callback callback-page">
+			<section class="page__callback callback-page" id="contacts">
 				<div class="callback-page__container">
 					<div class="callback-page__map">
 						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2342.140634568114!2d151.21659344755605!3d-33.88226033696624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12afd0db9f70ab%3A0x44c3f40d52057d5e!2sFlokk%20Australia%20Pty%20Ltd!5e0!3m2!1sru!2sru!4v1661294181681!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -504,9 +508,103 @@
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
+				<div class="footer__menu">
+					<div class="footer__logo">
+						<img src="img/footer/logo.svg" alt="logo">
+					</div>
+					<nav class="footer__navbar">
+						<ul class="footer__list">
+							<li class="footer__item"><a href="" class="footer__link">Портфолио</a></li>
+							<li class="footer__item"><a href="" class="footer__link">Виды работ</a></li>
+							<li class="footer__item"><a href="" class="footer__link">О фотостудии</a></li>
+							<li class="footer__item"><a href="" class="footer__link">Услуги и цены</a></li>
+							<li class="footer__item"><a href="" class="footer__link">Отзывы</a></li>
+							<li class="footer__item"><a href="" class="footer__link">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__socials">
+					<div class="footer__text">Наши социцальные сети:</div>
+					<div class="footer__icons">
+						<a href="#" class="footer__icon _icon-INSTAGRAM"></a>
+						<a href="#" class="footer__icon _icon-FACEBOOK"></a>
+						<a href="#" class="footer__icon _icon-TWITTER"></a>
+						<a href="#" class="footer__icon _icon-TELEGRAM"></a>
+					</div>
+				</div>
 			</div>
 		</footer>
 	</div>
+	<div id="popup1" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__title title">Помощь
+					в позировании
+				</div>
+				<div class="popup__box">
+					<label for="popup-01">Количество</label>
+					<input type="number" id="popup-01" placeholder="Введите количество фото для ретуши">
+				</div>
+				<button data-close type="submit" class="popup__btn btn">Сохранить</button>
+			</div>
+		</div>
+	</div>
+	<div id="popup2" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__title title">Визажист
+				</div>
+				<div class="popup__box">
+					<label for="popup-01">Количество</label>
+					<input type="number" id="popup-01" placeholder="Введите количество фото для ретуши">
+				</div>
+				<button data-close type="submit" class="popup__btn btn">Сохранить</button>
+			</div>
+		</div>
+	</div>
+	<div id="popup3" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__title title">Дополнительная ретушь фото
+				</div>
+				<div class="popup__box">
+					<label for="popup-01">Количество</label>
+					<input type="number" id="popup-01" placeholder="Введите количество фото для ретуши">
+				</div>
+				<button data-close type="submit" class="popup__btn btn">Сохранить</button>
+			</div>
+		</div>
+	</div>
+	<div id="popupfirstpage" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content content-popup">
+				<div class="content-popup__img">
+					<img src="img/first/woman.svg" alt="img">
+				</div>
+				<form class="content-popup__form">
+					<h2 class="content-popup__heading">Форма обратной связи</h2>
+					<div class="content-popup__box">
+						<label class="content-popup__name-label" for="name">Имя</label>
+						<input type="text" id="name" class="content-popup__name-input" placeholder="Введите ваше имя">
+					</div>
+					<div class="content-popup__box">
+						<label class="content-popup__email-label" for="email">E-mail</label>
+						<input type="text" id="email" class="content-popup__email-input" placeholder="Введите ваш E-mail">
+					</div>
+					<div class="content-popup__box">
+						<label class="content-popup__tel-label" for="tel">Телефон</label>
+						<input type="number" id="tel" class="content-popup__tel-input" placeholder="Введите ваш Телефон">
+					</div>
+					<button data-close type="submit" class="content-popup__btn btn">Отправить</button>
+					<div class="content-popup__data">Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь с <u>политикой конфиденциальности</u> </div>
+				</form>
+				<button data-close type="button" class="content-popup__close">
+					<img src="img/first/close.svg" alt="close">
+				</button>
+			</div>
+		</div>
+	</div>
+
 	<!-- <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
@@ -517,7 +615,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20220824040324"></script>
+	<script src="js/app.min.js?_v=20220824225118"></script>
 </body>
 
 </html>
