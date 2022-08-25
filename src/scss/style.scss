@@ -297,16 +297,6 @@ body {
 		max-height: 543px;
 	}
 }
-.title {
-	font-weight: 600;
-	@include adaptiveValue("font-size", 36, 24);
-	line-height: 120%;
-	text-align: center;
-	color: #333333;
-	&:not(:last-child) {
-		@include adaptiveValue("margin-bottom", 80, 40);
-	}
-}
 
 .jobs-page-pagination {
 	display: flex;

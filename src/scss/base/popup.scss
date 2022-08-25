@@ -82,13 +82,15 @@ body::after {
 .popup {
 	// .popup__content
 	&__content {
-		display: flex;
-		align-items: center;
-		& > * {
-			flex: 0 0 50%;
-		}
-		@media (max-width: $mobile) {
-			flex-direction: column;
+		&_row {
+			display: flex;
+			align-items: center;
+			& > * {
+				flex: 0 0 50%;
+			}
+			@media (max-width: $mobile) {
+				flex-direction: column;
+			}
 		}
 	}
 }
@@ -149,6 +151,10 @@ body::after {
 	}
 	// .content-popup__btn
 	&__btn {
+		// width: 100%;
+		// text-align: center;
+		// display: inline-flex;
+		// justify-content: center;
 		&:not(:first-child) {
 			@include adaptiveValue("margin-top", 32, 16);
 		}

@@ -74,10 +74,14 @@ document.addEventListener("click", function (e) {
 
 	const targetElement = e.target;
 
-	if (!targetElement.closest('.menu__body') || targetElement.closest('.menu__link')) {
-		html.classList.remove('menu-open');
-		html.classList.remove('lock');
+	if (!targetElement.closest('.menu__body')) {
+		// html.classList.remove('menu-open');
+		// html.classList.remove('lock');
 
+	}
+	if (targetElement.closest('.menu__icon')) {
+		// html.classList.toggle('menu-open');
+		// html.classList.toggle('lock');
 	}
 
 });

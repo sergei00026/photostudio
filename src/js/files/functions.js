@@ -427,12 +427,12 @@ export function menuInit() {
 
 
 export function menuOpen() {
-	// bodyLock();
-	// document.documentElement.classList.add("menu-open");
+	bodyLock();
+	document.documentElement.classList.add("menu-open");
 }
 export function menuClose() {
-	// bodyUnlock();
-	// document.documentElement.classList.remove("menu-open");
+	bodyUnlock();
+	document.documentElement.classList.remove("menu-open");
 }
 // Модуль "показать еще" =======================================================================================================================================================================================================================
 /*

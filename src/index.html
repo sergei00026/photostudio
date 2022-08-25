@@ -4,7 +4,7 @@
 	"title":"Photostidio"
 	})
 	<body>
-		<div class="wrapper">
+		<div class="wrapper" id="home">
 			@@include('html/_header.htm',{})
 			<main class="page">
 				<section class="page__first first-page">
@@ -84,7 +84,7 @@
 							<button type="button" class="locations-page__prev _icon-arrow"></button>
 							<button type="button" class="locations-page__next _icon-arrow"></button>
 						</div>
-						<div class="locations-page__btn btn">выбрать локацию </div>
+						<button type="submit" class="locations-page__btn btn" data-popup="#popuplocation">выбрать локацию </button>
 					</div>
 				</section>
 				<section class="page__decoration decoration-page">
@@ -404,12 +404,12 @@
 								</div>
 								<div class="sertificate-page__term">Срок действия сертификата: 2 месяца
 									со дня приобретения.</div>
-								<button type="submit" class="sertificate-page__btn">Приобрести</button>
+								<button type="submit" data-popup="#popupfirstpage" class="sertificate-page__btn">Приобрести</button>
 							</div>
 						</div>
 					</div>
 				</section>
-				<section class="page__reviews reviews-page">
+				<section class="page__reviews reviews-page" id="reviews">
 					<div class="reviews-page__container">
 						<h2 class="reviews-page__title title">Отзывы</h2>
 						<!-- Оболочка слайдера -->

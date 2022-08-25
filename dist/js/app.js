@@ -213,7 +213,10 @@
             }
         }));
     }
-    function menuClose() {}
+    function menuClose() {
+        bodyUnlock();
+        document.documentElement.classList.remove("menu-open");
+    }
     function functions_FLS(message) {
         setTimeout((() => {
             if (window.FLS) console.log(message);
@@ -4253,14 +4256,12 @@
         }));
     }));
     document.querySelector(".menu__body");
-    const script_html = document.querySelector("html");
+    document.querySelector("html");
     document.querySelector("body");
     document.addEventListener("click", (function(e) {
         const targetElement = e.target;
-        if (!targetElement.closest(".menu__body") || targetElement.closest(".menu__link")) {
-            script_html.classList.remove("menu-open");
-            script_html.classList.remove("lock");
-        }
+        if (!targetElement.closest(".menu__body")) ;
+        if (targetElement.closest(".menu__icon")) ;
     }));
     window["FLS"] = true;
     isWebp();
