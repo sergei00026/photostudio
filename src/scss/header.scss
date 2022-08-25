@@ -27,14 +27,15 @@
 	&__contacts {
 		align-items: center;
 		display: flex;
-		gap: 24px;
+		gap: 15px;
 		@media (max-width: $pc) {
 			flex-direction: column;
-			gap: 15px;
+			gap: 6px;
 			align-items: flex-end;
 		}
 		@media (max-width: $mobileSmall) {
 			flex-direction: row;
+			gap: 20px;
 		}
 	}
 	// .header__callback
@@ -84,6 +85,7 @@
 		flex: 1 1 auto;
 		display: flex;
 		justify-content: center;
+		transition: all 0.3s ease 0s;
 		@media (max-width: $mobile) {
 			display: flex;
 			flex-direction: column;
@@ -92,13 +94,24 @@
 			right: -100%;
 			padding: 20px;
 			z-index: 10;
+			& .menu__list {
+				flex-direction: column;
+				align-items: flex-end;
+			}
+			& .menu__link {
+				text-align: right;
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 143%;
+				color: #ffffff;
+			}
 		}
 		.menu-open & {
 			display: flex;
 			flex-direction: column;
 			position: fixed;
 			top: 80px;
-			right: 0px;
+			right: 0%;
 			padding: 20px;
 			z-index: 10;
 			& .menu__list {
@@ -110,7 +123,7 @@
 			& .menu__link {
 				text-align: right;
 				font-weight: 600;
-				font-size: 14px;
+				font-size: 20px;
 				line-height: 143%;
 				color: #ffffff;
 			}

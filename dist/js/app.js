@@ -87,9 +87,6 @@
         if (target.hidden) return _slideDown(target, duration); else return _slideUp(target, duration);
     };
     let bodyLockStatus = true;
-    let bodyLockToggle = (delay = 500) => {
-        if (document.documentElement.classList.contains("lock")) bodyUnlock(delay); else bodyLock(delay);
-    };
     let bodyUnlock = (delay = 500) => {
         let body = document.querySelector("body");
         if (bodyLockStatus) {
@@ -204,14 +201,6 @@
                 }));
             }));
         }
-    }
-    function menuInit() {
-        if (document.querySelector(".icon-menu")) document.addEventListener("click", (function(e) {
-            if (bodyLockStatus && e.target.closest(".icon-menu")) {
-                bodyLockToggle();
-                document.documentElement.classList.toggle("menu-open");
-            }
-        }));
     }
     function menuClose() {
         bodyUnlock();
@@ -4256,16 +4245,20 @@
         }));
     }));
     document.querySelector(".menu__body");
-    document.querySelector("html");
+    const script_html = document.querySelector("html");
     document.querySelector("body");
     document.addEventListener("click", (function(e) {
         const targetElement = e.target;
-        if (!targetElement.closest(".menu__body")) ;
-        if (targetElement.closest(".menu__icon")) ;
+        if (targetElement.closest(".menu__icon")) {
+            script_html.classList.toggle("menu-open");
+            script_html.classList.toggle("lock");
+        } else if (!targetElement.closest(".menu__body")) {
+            script_html.classList.remove("menu-open");
+            script_html.classList.remove("lock");
+        }
     }));
     window["FLS"] = true;
     isWebp();
-    menuInit();
     spollers();
     pageNavigation();
 })();

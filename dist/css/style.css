@@ -595,7 +595,7 @@ body::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 24px;
+  gap: 15px;
 }
 
 .header__callback {
@@ -638,6 +638,9 @@ body::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .menu-open .menu__body {
@@ -650,7 +653,7 @@ body::after {
           flex-direction: column;
   position: fixed;
   top: 80px;
-  right: 0px;
+  right: 0%;
   padding: 20px;
   z-index: 10;
 }
@@ -668,7 +671,7 @@ body::after {
 .menu-open .menu__body .menu__link {
   text-align: right;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 143%;
   color: #ffffff;
 }
@@ -705,6 +708,10 @@ body::after {
 
 .icon-menu {
   display: none;
+}
+
+.footer {
+  background: #f2f4f4;
 }
 
 .footer__menu {
@@ -2607,7 +2614,7 @@ label:not(:last-child) {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 15px;
+    gap: 6px;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
@@ -2675,7 +2682,7 @@ label:not(:last-child) {
   }
 
   .services-page__item_big-row img {
-    content: url("img/services/small.jpg");
+    content: url("../img/services/small.jpg");
     -o-object-fit: cover;
        object-fit: cover;
     width: 100%;
@@ -2819,6 +2826,24 @@ label:not(:last-child) {
     z-index: 10;
   }
 
+  .menu__body .menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+
+  .menu__body .menu__link {
+    text-align: right;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 143%;
+    color: #ffffff;
+  }
+
   .menu__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2924,6 +2949,7 @@ label:not(:last-child) {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    gap: 20px;
   }
 
   .header__callback {

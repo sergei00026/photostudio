@@ -73,15 +73,15 @@ const body = document.querySelector('body');
 document.addEventListener("click", function (e) {
 
 	const targetElement = e.target;
-
-	if (!targetElement.closest('.menu__body')) {
-		// html.classList.remove('menu-open');
-		// html.classList.remove('lock');
-
-	}
 	if (targetElement.closest('.menu__icon')) {
-		// html.classList.toggle('menu-open');
-		// html.classList.toggle('lock');
+		html.classList.toggle('menu-open');
+		html.classList.toggle('lock');
 	}
+	else if (!targetElement.closest('.menu__body')) {
+		html.classList.remove('menu-open');
+		html.classList.remove('lock');
+
+	}
+
 
 });
