@@ -1,4 +1,5 @@
 .footer {
+	padding: 45px 0;
 	background: #f2f4f4;
 	// .footer__container
 	&__container {
@@ -9,7 +10,7 @@
 		align-items: center;
 		gap: 52px;
 		min-height: 147px;
-		padding: 15px 0;
+		padding: 15px;
 		@media (max-width: $mobile) {
 			flex-wrap: wrap;
 		}
@@ -64,7 +65,7 @@
 		row-gap: 16px;
 		position: relative;
 		min-height: 123px;
-		padding: 15px 0;
+		padding: 15px;
 		flex-wrap: wrap;
 		&::before {
 			content: "";
