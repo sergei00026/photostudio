@@ -9,3 +9,11 @@
 		@include adaptiveValue("margin-bottom", 80, 40);
 	}
 }
+
+[class*="_btn"] {
+	transition: all 0.3s ease 0s;
+	&:hover {
+		color: #333333;
+		background: linear-gradient(180deg, #e97522 -21.43%, #ee7a28 100%);
+	}
+}

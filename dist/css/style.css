@@ -557,6 +557,19 @@ body::after {
   }
 }
 
+[class*=_btn] {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+[class*=_btn]:hover {
+  color: #333333;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-21.43%, #e97522), to(#ee7a28));
+  background: -o-linear-gradient(top, #e97522 -21.43%, #ee7a28 100%);
+  background: linear-gradient(180deg, #e97522 -21.43%, #ee7a28 100%);
+}
+
 .menu-open .header {
   background: rgba(15, 15, 15, 0.7);
 }
@@ -1747,9 +1760,9 @@ body::after {
   font-size: 12px;
   line-height: 120%;
   cursor: url("../img/prices/cursor.svg"), pointer;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
 .add-services-prices__item:hover {

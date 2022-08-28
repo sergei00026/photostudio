@@ -912,7 +912,8 @@ body {
 		font-size: 12px;
 		line-height: 120%;
 		cursor: url("../img/prices/cursor.svg"), pointer;
-		transition: all 0.3s ease 0s;
+
+		transition: all 0.5s ease 0s;
 		&:hover {
 			background: #f7f5f5;
 		}
